@@ -18,11 +18,39 @@
         {
             $korisnik = dohvati_korisnika_pomocu_id($slika[0]['korisnik_id']);
             $planina = dohvati_planinu_po_id(($slika[0]['planina_id']));
+
         }
     }
 
     $title = "- Detalji slike";
     $trenutna_stranica = "";
+
+
+    $geo_sirina = $planina[0]["geografska_sirina"];
+    $geo_duzina = $planina[0]["geografska_duzina"];
+
+    $jsonUrl = "https://api.open-meteo.com/v1/forecast?latitude=$geo_sirina&longitude=$geo_duzina&current=temperature";
+
+    // Initialize cURL session
+    $curl = curl_init($jsonUrl);
+
+    // Set cURL options
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($curl, CURLOPT_HTTPHEADER, [
+		'Content-Type: application/json',
+		'Accept: application/json'
+	]);
+
+    // Execute cURL session and get the response
+    $response = curl_exec($curl);
+
+    // Close cURL session
+    curl_close($curl);
+
+    // Decode JSON response
+    $vrijemeDanas = json_decode($response, true);
+
+//	print_r($vrijemeDanas);
     
     include "includes/header.php";
     include "includes/navigacija.php";
@@ -59,6 +87,7 @@
 
                 <p><strong>Naziv: </strong> <?php echo $slika[0]["naziv"] ?></p>
                 <p><strong>Opis slike: </strong><?php echo $slika[0]["opis"] ?></p>
+                <p><strong>Trenutna temperatura: </strong><?php echo $vrijemeDanas["current"]["temperature"] ?> °C</p>
             </div>
         </div>
     </section>

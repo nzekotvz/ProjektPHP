@@ -8,12 +8,12 @@
 
 ## Administrator
 - username: admin
-- pass: foi
+- pass: tvz
 
 ## Moderator
 - username: voditelj
 - pass: 123456
 
-## Anonimni korisnik 
+## korisnik 
 - username: pkos
 - pass: 123456

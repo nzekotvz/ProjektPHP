@@ -1,6 +1,6 @@
 <?php
-    define("POSLUZITELJ","mysql");
-    define("BAZA","iwa_2020_vz_projekt");
+    define("POSLUZITELJ","127.0.0.1");
+    define("BAZA","tvz_2023_projekt");
     define("BAZA_KORISNIK","root");
     define("BAZA_LOZINKA","m11");
 

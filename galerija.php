@@ -1,10 +1,13 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
 	include "baza.php";
 
 	if(session_id()=="");
 	{
 		session_start();
 	}
+	
 	include "funkcije/funkcije_slike_planine.php";
 	include "funkcije/funkcije_korisnici.php";
 
@@ -80,7 +83,7 @@
 
 	$title = "-Galerija";
 	$trenutna_stranica = "galerija";
-	
+
 	include "includes/header.php";
 	include "includes/navigacija.php";
 	
@@ -108,7 +111,7 @@
 			{
 				echo $_GET["vrijeme_slikanja_od"];
 			}
-			?>" placeholder="2020.10.01 10:00:00">
+			?>" placeholder="01.10.2020 12:00:00">
 
 			<label for="vrijeme_slikanja_do">Vrijeme slikanja do:</label>
 			<input type="text" name="vrijeme_slikanja_do" value="<?php 
@@ -116,7 +119,7 @@
 			{
 				echo $_GET["vrijeme_slikanja_do"];
 			}
-			?>" placeholder="2020.10.15 10:00:00">
+			?>" placeholder="15.10.2020 10:00:00">
 
 			<input type="submit" value="Filtiraj">
 		</form>

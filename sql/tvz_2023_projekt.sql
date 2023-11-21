@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql
--- Generation Time: Oct 21, 2023 at 06:51 PM
+-- Generation Time: Nov 19, 2023 at 05:03 PM
 -- Server version: 5.7.41-log
 -- PHP Version: 7.4.33
 
@@ -18,10 +18,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `iwa_2020_vz_projekt`
+-- Database: `tvz_2023_projekt`
 --
-CREATE DATABASE IF NOT EXISTS `iwa_2020_vz_projekt` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-USE `iwa_2020_vz_projekt`;
+CREATE DATABASE IF NOT EXISTS `tvz_2023_projekt` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `tvz_2023_projekt`;
 
 -- --------------------------------------------------------
 
@@ -29,6 +29,7 @@ USE `iwa_2020_vz_projekt`;
 -- Table structure for table `korisnik`
 --
 
+DROP TABLE IF EXISTS `korisnik`;
 CREATE TABLE `korisnik` (
   `korisnik_id` int(11) NOT NULL,
   `tip_korisnika_id` int(11) NOT NULL,
@@ -46,71 +47,71 @@ CREATE TABLE `korisnik` (
 --
 
 INSERT INTO `korisnik` (`korisnik_id`, `tip_korisnika_id`, `korisnicko_ime`, `lozinka`, `ime`, `prezime`, `email`, `blokiran`, `slika`) VALUES
-(1, 0, 'admin', 'foi', 'Administrator', 'Admin', 'admin@foi.hr', 0, 'korisnici/admin.jpg'),
-(2, 1, 'voditelj', '123456', 'voditelj', 'Vodi', 'voditelj@foi.hr', 0, 'korisnici/admin.jpg'),
+(1, 0, 'admin', 'tvz', 'Administrator', 'Admin', 'admin@tvz.hr', 0, 'korisnici/admin.jpg'),
+(2, 1, 'voditelj', '123456', 'voditelj', 'Vodi', 'voditelj@tvz.hr', 0, 'korisnici/admin.jpg'),
 (3, 2, 'pkos', '123456', 'Pero', 'Kos', 'pkos@fff.hr', 0, 'korisnici/pkos.jpg'),
 (4, 2, 'vzec', '123456', 'Vladimir', 'Zec', 'vzec@fff.hr', 0, 'korisnici/vzec.jpg'),
-(5, 2, 'qtarantino', '123456', 'Quentin', 'Tarantino', 'qtarantino@foi.hr', 0, 'korisnici/qtarantino.jpg'),
-(6, 2, 'mbellucci', '123456', 'Monica', 'Bellucci', 'mbellucci@foi.hr', 0, 'korisnici/mbellucci.jpg'),
-(7, 2, 'vmortensen', '123456', 'Viggo', 'Mortensen', 'vmortensen@foi.hr', 0, 'korisnici/vmortensen.jpg'),
-(8, 2, 'jgarner', '123456', 'Jennifer', 'Garner', 'jgarner@foi.hr', 0, 'korisnici/jgarner.jpg'),
-(9, 2, 'nportman', '123456', 'Natalie', 'Portman', 'nportman@foi.hr', 0, 'korisnici/nportman.jpg'),
-(10, 2, 'dradcliffe', '123456', 'Daniel', 'Radcliffe', 'dradcliffe@foi.hr', 0, 'korisnici/dradcliffe.jpg'),
-(11, 2, 'hberry', '123456', 'Halle', 'Berry', 'hberry@foi.hr', 0, 'korisnici/hberry.jpg'),
-(12, 2, 'vdiesel', '123456', 'Vin', 'Diesel', 'vdiesel@foi.hr', 0, 'korisnici/vdiesel.jpg'),
-(13, 2, 'ecuthbert', '123456', 'Elisha', 'Cuthbert', 'ecuthbert@foi.hr', 0, 'korisnici/ecuthbert.jpg'),
-(14, 2, 'janiston', '123456', 'Jennifer', 'Aniston', 'janiston@foi.hr', 0, 'korisnici/janiston.jpg'),
-(15, 2, 'ctheron', '123456', 'Charlize', 'Theron', 'ctheron@foi.hr', 0, 'korisnici/ctheron.jpg'),
-(16, 2, 'nkidman', '123456', 'Nicole', 'Kidman', 'nkidman@foi.hr', 0, 'korisnici/nkidman.jpg'),
-(17, 2, 'ewatson', '123456', 'Emma', 'Watson', 'ewatson@foi.hr', 0, 'korisnici/ewatson.jpg'),
-(18, 1, 'kdunst', '123456', 'Kirsten', 'Dunst', 'kdunst@foi.hr', 0, 'korisnici/kdunst.jpg'),
-(19, 2, 'sjohansson', '123456', 'Scarlett', 'Johansson', 'sjohansson@foi.hr', 0, 'korisnici/sjohansson.jpg'),
-(20, 2, 'philton', '123456', 'Paris', 'Hilton', 'philton@foi.hr', 0, 'korisnici/philton.jpg'),
-(21, 2, 'kbeckinsale', '123456', 'Kate', 'Beckinsale', 'kbeckinsale@foi.hr', 0, 'korisnici/kbeckinsale.jpg'),
-(22, 2, 'tcruise', '123456', 'Tom', 'Cruise', 'tcruise@foi.hr', 0, 'korisnici/tcruise.jpg'),
-(23, 2, 'hduff', '123456', 'Hilary', 'Duff', 'hduff@foi.hr', 0, 'korisnici/hduff.jpg'),
-(24, 2, 'ajolie', '123456', 'Angelina', 'Jolie', 'ajolie@foi.hr', 0, 'korisnici/ajolie.jpg'),
-(25, 2, 'kknightley', '123456', 'Keira', 'Knightley', 'kknightley@foi.hr', 0, 'korisnici/kknightley.jpg'),
-(26, 2, 'obloom', '123456', 'Orlando', 'Bloom', 'obloom@foi.hr', 0, 'korisnici/obloom.jpg'),
-(27, 2, 'llohan', '123456', 'Lindsay', 'Lohan', 'llohan@foi.hr', 0, 'korisnici/llohan.jpg'),
-(28, 2, 'jdepp', '123456', 'Johnny', 'Depp', 'jdepp@foi.hr', 0, 'korisnici/jdepp.jpg'),
-(29, 2, 'kreeves', '123456', 'Keanu', 'Reeves', 'kreeves@foi.hr', 0, 'korisnici/kreeves.jpg'),
-(30, 1, 'thanks', '123456', 'Tom', 'Hanks', 'thanks@foi.hr', 0, 'korisnici/thanks.jpg'),
-(31, 2, 'elongoria', '123456', 'Eva', 'Longoria', 'elongoria@foi.hr', 0, 'korisnici/elongoria.jpg'),
-(32, 2, 'rde', '123456', 'Robert', 'De', 'rde@foi.hr', 0, 'korisnici/rde.jpg'),
-(33, 2, 'jheder', '123456', 'Jon', 'Heder', 'jheder@foi.hr', 0, 'korisnici/jheder.jpg'),
-(34, 2, 'rmcadams', '123456', 'Rachel', 'McAdams', 'rmcadams@foi.hr', 0, 'korisnici/rmcadams.jpg'),
-(35, 2, 'cbale', '123456', 'Christian', 'Bale', 'cbale@foi.hr', 0, 'korisnici/cbale.jpg'),
-(36, 1, 'jalba', '123456', 'Jessica', 'Alba', 'jalba@foi.hr', 0, 'korisnici/jalba.jpg'),
-(37, 2, 'bpitt', '123456', 'Brad', 'Pitt', 'bpitt@foi.hr', 0, 'korisnici/bpitt.jpg'),
-(43, 2, 'apacino', '123456', 'Al', 'Pacino', 'apacino@foi.hr', 0, 'korisnici/apacino.jpg'),
-(44, 2, 'wsmith', '123456', 'Will', 'Smith', 'wsmith@foi.hr', 0, 'korisnici/wsmith.jpg'),
-(45, 2, 'ncage', '123456', 'Nicolas', 'Cage', 'ncage@foi.hr', 0, 'korisnici/ncage.jpg'),
-(46, 2, 'vanne', '123456', 'Vanessa', 'Anne', 'vanne@foi.hr', 0, 'korisnici/vanne.jpg'),
-(47, 2, 'kheigl', '123456', 'Katherine', 'Heigl', 'kheigl@foi.hr', 0, 'korisnici/kheigl.jpg'),
-(48, 2, 'gbutler', '123456', 'Gerard', 'Butler', 'gbutler@foi.hr', 0, 'korisnici/gbutler.jpg'),
-(49, 2, 'jbiel', '123456', 'Jessica', 'Biel', 'jbiel@foi.hr', 0, 'korisnici/jbiel.jpg'),
-(50, 2, 'ldicaprio', '123456', 'Leonardo', 'DiCaprio', 'ldicaprio@foi.hr', 0, 'korisnici/ldicaprio.jpg'),
-(51, 2, 'mdamon', '123456', 'Matt', 'Damon', 'mdamon@foi.hr', 0, 'korisnici/mdamon.jpg'),
-(52, 2, 'hpanettiere', '123456', 'Hayden', 'Panettiere', 'hpanettiere@foi.hr', 0, 'korisnici/hpanettiere.jpg'),
-(53, 2, 'rreynolds', '123456', 'Ryan', 'Reynolds', 'rreynolds@foi.hr', 0, 'korisnici/rreynolds.jpg'),
-(54, 2, 'jstatham', '123456', 'Jason', 'Statham', 'jstatham@foi.hr', 0, 'korisnici/jstatham.jpg'),
-(55, 2, 'enorton', '123456', 'Edward', 'Norton', 'enorton@foi.hr', 0, 'korisnici/enorton.jpg'),
-(56, 2, 'mwahlberg', '123456', 'Mark', 'Wahlberg', 'mwahlberg@foi.hr', 0, 'korisnici/mwahlberg.jpg'),
-(57, 2, 'jmcavoy', '123456', 'James', 'McAvoy', 'jmcavoy@foi.hr', 0, 'korisnici/jmcavoy.jpg'),
-(58, 2, 'epage', '123456', 'Ellen', 'Page', 'epage@foi.hr', 0, 'korisnici/epage.jpg'),
-(59, 2, 'mcyrus', '123456', 'Miley', 'Cyrus', 'mcyrus@foi.hr', 0, 'korisnici/mcyrus.jpg'),
-(60, 2, 'kstewart', '123456', 'Kristen', 'Stewart', 'kstewart@foi.hr', 0, 'korisnici/kstewart.jpg'),
-(61, 2, 'mfox', '123456', 'Megan', 'Fox', 'mfox@foi.hr', 0, 'korisnici/mfox.jpg'),
-(62, 2, 'slabeouf', '123456', 'Shia', 'LaBeouf', 'slabeouf@foi.hr', 0, 'korisnici/slabeouf.jpg'),
-(63, 2, 'ceastwood', '123456', 'Clint', 'Eastwood', 'ceastwood@foi.hr', 0, 'korisnici/ceastwood.jpg'),
-(64, 2, 'srogen', '123456', 'Seth', 'Rogen', 'srogen@foi.hr', 0, 'korisnici/srogen.jpg'),
-(65, 2, 'nreed', '123456', 'Nikki', 'Reed', 'nreed@foi.hr', 0, 'korisnici/nreed.jpg'),
-(66, 2, 'agreene', '123456', 'Ashley', 'Greene', 'agreene@foi.hr', 1, 'korisnici/agreene.jpg'),
-(67, 2, 'zdeschanel', '123456', 'Zooey', 'Deschanel', 'zdeschanel@foi.hr', 1, 'korisnici/zdeschanel.jpg'),
-(68, 2, 'dfanning', '123456', 'Dakota', 'Fanning', 'dfanning@foi.hr', 1, 'korisnici/dfanning.jpg'),
-(69, 2, 'tlautner', '123456', 'Taylor', 'Lautner', 'tlautner@foi.hr', 1, 'korisnici/tlautner.jpg'),
-(70, 2, 'rpattinson', '123456', 'Robert', 'Pattinson', 'rpattinson@foi.hr', 1, 'korisnici/rpattinson.jpg');
+(5, 2, 'qtarantino', '123456', 'Quentin', 'Tarantino', 'qtarantino@tvz.hr', 0, 'korisnici/qtarantino.jpg'),
+(6, 2, 'mbellucci', '123456', 'Monica', 'Bellucci', 'mbellucci@tvz.hr', 0, 'korisnici/mbellucci.jpg'),
+(7, 2, 'vmortensen', '123456', 'Viggo', 'Mortensen', 'vmortensen@tvz.hr', 0, 'korisnici/vmortensen.jpg'),
+(8, 2, 'jgarner', '123456', 'Jennifer', 'Garner', 'jgarner@tvz.hr', 0, 'korisnici/jgarner.jpg'),
+(9, 2, 'nportman', '123456', 'Natalie', 'Portman', 'nportman@tvz.hr', 0, 'korisnici/nportman.jpg'),
+(10, 2, 'dradcliffe', '123456', 'Daniel', 'Radcliffe', 'dradcliffe@tvz.hr', 0, 'korisnici/dradcliffe.jpg'),
+(11, 2, 'hberry', '123456', 'Halle', 'Berry', 'hberry@tvz.hr', 0, 'korisnici/hberry.jpg'),
+(12, 2, 'vdiesel', '123456', 'Vin', 'Diesel', 'vdiesel@tvz.hr', 0, 'korisnici/vdiesel.jpg'),
+(13, 2, 'ecuthbert', '123456', 'Elisha', 'Cuthbert', 'ecuthbert@tvz.hr', 0, 'korisnici/ecuthbert.jpg'),
+(14, 2, 'janiston', '123456', 'Jennifer', 'Aniston', 'janiston@tvz.hr', 0, 'korisnici/janiston.jpg'),
+(15, 2, 'ctheron', '123456', 'Charlize', 'Theron', 'ctheron@tvz.hr', 0, 'korisnici/ctheron.jpg'),
+(16, 2, 'nkidman', '123456', 'Nicole', 'Kidman', 'nkidman@tvz.hr', 0, 'korisnici/nkidman.jpg'),
+(17, 2, 'ewatson', '123456', 'Emma', 'Watson', 'ewatson@tvz.hr', 0, 'korisnici/ewatson.jpg'),
+(18, 1, 'kdunst', '123456', 'Kirsten', 'Dunst', 'kdunst@tvz.hr', 0, 'korisnici/kdunst.jpg'),
+(19, 2, 'sjohansson', '123456', 'Scarlett', 'Johansson', 'sjohansson@tvz.hr', 0, 'korisnici/sjohansson.jpg'),
+(20, 2, 'philton', '123456', 'Paris', 'Hilton', 'philton@tvz.hr', 0, 'korisnici/philton.jpg'),
+(21, 2, 'kbeckinsale', '123456', 'Kate', 'Beckinsale', 'kbeckinsale@tvz.hr', 0, 'korisnici/kbeckinsale.jpg'),
+(22, 2, 'tcruise', '123456', 'Tom', 'Cruise', 'tcruise@tvz.hr', 0, 'korisnici/tcruise.jpg'),
+(23, 2, 'hduff', '123456', 'Hilary', 'Duff', 'hduff@tvz.hr', 0, 'korisnici/hduff.jpg'),
+(24, 2, 'ajolie', '123456', 'Angelina', 'Jolie', 'ajolie@tvz.hr', 0, 'korisnici/ajolie.jpg'),
+(25, 2, 'kknightley', '123456', 'Keira', 'Knightley', 'kknightley@tvz.hr', 0, 'korisnici/kknightley.jpg'),
+(26, 2, 'obloom', '123456', 'Orlando', 'Bloom', 'obloom@tvz.hr', 0, 'korisnici/obloom.jpg'),
+(27, 2, 'llohan', '123456', 'Lindsay', 'Lohan', 'llohan@tvz.hr', 0, 'korisnici/llohan.jpg'),
+(28, 2, 'jdepp', '123456', 'Johnny', 'Depp', 'jdepp@tvz.hr', 0, 'korisnici/jdepp.jpg'),
+(29, 2, 'kreeves', '123456', 'Keanu', 'Reeves', 'kreeves@tvz.hr', 0, 'korisnici/kreeves.jpg'),
+(30, 1, 'thanks', '123456', 'Tom', 'Hanks', 'thanks@tvz.hr', 0, 'korisnici/thanks.jpg'),
+(31, 2, 'elongoria', '123456', 'Eva', 'Longoria', 'elongoria@tvz.hr', 0, 'korisnici/elongoria.jpg'),
+(32, 2, 'rde', '123456', 'Robert', 'De', 'rde@tvz.hr', 0, 'korisnici/rde.jpg'),
+(33, 2, 'jheder', '123456', 'Jon', 'Heder', 'jheder@tvz.hr', 0, 'korisnici/jheder.jpg'),
+(34, 2, 'rmcadams', '123456', 'Rachel', 'McAdams', 'rmcadams@tvz.hr', 0, 'korisnici/rmcadams.jpg'),
+(35, 2, 'cbale', '123456', 'Christian', 'Bale', 'cbale@tvz.hr', 0, 'korisnici/cbale.jpg'),
+(36, 1, 'jalba', '123456', 'Jessica', 'Alba', 'jalba@tvz.hr', 0, 'korisnici/jalba.jpg'),
+(37, 2, 'bpitt', '123456', 'Brad', 'Pitt', 'bpitt@tvz.hr', 0, 'korisnici/bpitt.jpg'),
+(43, 2, 'apacino', '123456', 'Al', 'Pacino', 'apacino@tvz.hr', 0, 'korisnici/apacino.jpg'),
+(44, 2, 'wsmith', '123456', 'Will', 'Smith', 'wsmith@tvz.hr', 0, 'korisnici/wsmith.jpg'),
+(45, 2, 'ncage', '123456', 'Nicolas', 'Cage', 'ncage@tvz.hr', 0, 'korisnici/ncage.jpg'),
+(46, 2, 'vanne', '123456', 'Vanessa', 'Anne', 'vanne@tvz.hr', 0, 'korisnici/vanne.jpg'),
+(47, 2, 'kheigl', '123456', 'Katherine', 'Heigl', 'kheigl@tvz.hr', 0, 'korisnici/kheigl.jpg'),
+(48, 2, 'gbutler', '123456', 'Gerard', 'Butler', 'gbutler@tvz.hr', 0, 'korisnici/gbutler.jpg'),
+(49, 2, 'jbiel', '123456', 'Jessica', 'Biel', 'jbiel@tvz.hr', 0, 'korisnici/jbiel.jpg'),
+(50, 2, 'ldicaprio', '123456', 'Leonardo', 'DiCaprio', 'ldicaprio@tvz.hr', 0, 'korisnici/ldicaprio.jpg'),
+(51, 2, 'mdamon', '123456', 'Matt', 'Damon', 'mdamon@tvz.hr', 0, 'korisnici/mdamon.jpg'),
+(52, 2, 'hpanettiere', '123456', 'Hayden', 'Panettiere', 'hpanettiere@tvz.hr', 0, 'korisnici/hpanettiere.jpg'),
+(53, 2, 'rreynolds', '123456', 'Ryan', 'Reynolds', 'rreynolds@tvz.hr', 0, 'korisnici/rreynolds.jpg'),
+(54, 2, 'jstatham', '123456', 'Jason', 'Statham', 'jstatham@tvz.hr', 0, 'korisnici/jstatham.jpg'),
+(55, 2, 'enorton', '123456', 'Edward', 'Norton', 'enorton@tvz.hr', 0, 'korisnici/enorton.jpg'),
+(56, 2, 'mwahlberg', '123456', 'Mark', 'Wahlberg', 'mwahlberg@tvz.hr', 0, 'korisnici/mwahlberg.jpg'),
+(57, 2, 'jmcavoy', '123456', 'James', 'McAvoy', 'jmcavoy@tvz.hr', 0, 'korisnici/jmcavoy.jpg'),
+(58, 2, 'epage', '123456', 'Ellen', 'Page', 'epage@tvz.hr', 0, 'korisnici/epage.jpg'),
+(59, 2, 'mcyrus', '123456', 'Miley', 'Cyrus', 'mcyrus@tvz.hr', 0, 'korisnici/mcyrus.jpg'),
+(60, 2, 'kstewart', '123456', 'Kristen', 'Stewart', 'kstewart@tvz.hr', 0, 'korisnici/kstewart.jpg'),
+(61, 2, 'mfox', '123456', 'Megan', 'Fox', 'mfox@tvz.hr', 0, 'korisnici/mfox.jpg'),
+(62, 2, 'slabeouf', '123456', 'Shia', 'LaBeouf', 'slabeouf@tvz.hr', 0, 'korisnici/slabeouf.jpg'),
+(63, 2, 'ceastwood', '123456', 'Clint', 'Eastwood', 'ceastwood@tvz.hr', 0, 'korisnici/ceastwood.jpg'),
+(64, 2, 'srogen', '123456', 'Seth', 'Rogen', 'srogen@tvz.hr', 0, 'korisnici/srogen.jpg'),
+(65, 2, 'nreed', '123456', 'Nikki', 'Reed', 'nreed@tvz.hr', 0, 'korisnici/nreed.jpg'),
+(66, 2, 'agreene', '123456', 'Ashley', 'Greene', 'agreene@tvz.hr', 1, 'korisnici/agreene.jpg'),
+(67, 2, 'zdeschanel', '123456', 'Zooey', 'Deschanel', 'zdeschanel@tvz.hr', 1, 'korisnici/zdeschanel.jpg'),
+(68, 2, 'dfanning', '123456', 'Dakota', 'Fanning', 'dfanning@tvz.hr', 1, 'korisnici/dfanning.jpg'),
+(69, 2, 'tlautner', '123456', 'Taylor', 'Lautner', 'tlautner@tvz.hr', 1, 'korisnici/tlautner.jpg'),
+(70, 2, 'rpattinson', '123456', 'Robert', 'Pattinson', 'rpattinson@tvz.hr', 1, 'korisnici/rpattinson.jpg');
 
 -- --------------------------------------------------------
 
@@ -118,6 +119,7 @@ INSERT INTO `korisnik` (`korisnik_id`, `tip_korisnika_id`, `korisnicko_ime`, `lo
 -- Table structure for table `moderator`
 --
 
+DROP TABLE IF EXISTS `moderator`;
 CREATE TABLE `moderator` (
   `korisnik_id` int(11) NOT NULL,
   `planina_id` int(11) NOT NULL
@@ -145,6 +147,7 @@ INSERT INTO `moderator` (`korisnik_id`, `planina_id`) VALUES
 -- Table structure for table `planina`
 --
 
+DROP TABLE IF EXISTS `planina`;
 CREATE TABLE `planina` (
   `planina_id` int(11) NOT NULL,
   `naziv` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
@@ -171,6 +174,7 @@ INSERT INTO `planina` (`planina_id`, `naziv`, `opis`, `lokacija`, `geografska_si
 -- Table structure for table `slika`
 --
 
+DROP TABLE IF EXISTS `slika`;
 CREATE TABLE `slika` (
   `slika_id` int(11) NOT NULL,
   `planina_id` int(11) NOT NULL,
@@ -188,12 +192,12 @@ CREATE TABLE `slika` (
 
 INSERT INTO `slika` (`slika_id`, `planina_id`, `korisnik_id`, `naziv`, `url`, `opis`, `datum_vrijeme_slikanja`, `status`) VALUES
 (1, 1, 3, 'Dinara iz daljine', 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Dinara_central.jpg', 'Najbolji pogled', '2020-10-02 10:00:00', 1),
-(2, 1, 3, 'Kod vrha', 'https://croatia.hr/sites/default/files/styles/image_full_width/public/migrate/badanj-14-alan-caplar.jpg', 'Zadnja ravnica prije kraja', '2020-10-03 10:00:00', 1),
+(2, 1, 3, 'Kod vrha', 'https://www.vecernji.hr/media/img/d2/e6/9e94a23ec4c883ece598.jpeg', 'Zadnja ravnica prije kraja', '2020-10-03 10:00:00', 1),
 (3, 1, 3, 'Dinara najviša planina', 'https://live.staticflickr.com/4511/36844950564_70b897f770_z.jpg', 'Sunset on the higest mountain in Croatia, and the first snow this fall. Below the mountain, Krčić river runs out.', '2020-10-22 10:00:00', 1),
 (4, 2, 3, 'Šume Ivanščice', 'https://live.staticflickr.com/4564/26859026319_8345211dc1_o.jpg', 'Predivna staza', '2020-10-04 10:00:00', 1),
 (5, 2, 3, 'Ivanščica zalazak', 'http://www.mnovine.hr/wp-content/uploads/2017/12/Zalazak-sunca-Ivan%C5%A1%C4%8Dica-3.jpg', 'Pogled s Ivanščice na očaravajući zimski zalazak', '2020-10-05 10:00:00', 1),
-(6, 3, 3, 'Medvednica iz zraka', 'https://croatia.hr/sites/default/files/styles/image_full_width/public/migrate/medvedgrad-iz-zraka-17-alan-caplar-dronom.jpg', 'Slikano sa dronom', '2020-10-06 10:00:00', 1),
-(7, 3, 3, 'Medvednica park', 'http://www.discoverdinarides.com/content/big_579b3d9f62a92.jpg', 'Nature Park Medvednica | Parks Dinarides', '2020-10-07 10:00:00', 1),
+(6, 3, 3, 'Medvednica iz zraka', 'https://travelcroatia.live/wp-content/uploads/2021/11/medvedgrad-zoran-jelaca.jpg', 'Slikano sa dronom', '2020-10-06 10:00:00', 1),
+(7, 3, 3, 'Medvednica park', 'https://peakvisor.com/photo/SD/Medvednica-Nature-Park-Croatia-lake.jpg', 'Nature Park Medvednica | Parks Dinarides', '2020-10-07 10:00:00', 1),
 (8, 1, 3, 'Mali Troglav Dinara', 'https://upload.wikimedia.org/wikipedia/commons/e/e9/Mali_Troglav,_Dinara-0024.jpg', 'Ljepi vrh', '2020-10-08 13:00:00', 0),
 (9, 1, 70, 'Dinara most', 'https://croatia.hr/sites/default/files/styles/image_full_width/public/migrate/rijeka-cetina-alan-caplar.jpg?itok=EoUfafQk', 'Super mjesto', '2020-10-09 10:00:00', 0),
 (10, 1, 70, 'Novac dinara', 'https://www.leftovercurrency.com/wp-content/uploads/2017/11/serbia-5-dinara-coin-obverse-1.jpg', 'Novac', '2020-10-09 12:00:00', 0),
@@ -210,6 +214,7 @@ INSERT INTO `slika` (`slika_id`, `planina_id`, `korisnik_id`, `naziv`, `url`, `o
 -- Table structure for table `tip_korisnika`
 --
 
+DROP TABLE IF EXISTS `tip_korisnika`;
 CREATE TABLE `tip_korisnika` (
   `tip_korisnika_id` int(11) NOT NULL,
   `naziv` varchar(50) COLLATE utf8_unicode_ci NOT NULL
